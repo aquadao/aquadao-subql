@@ -1,0 +1,20 @@
+specVersion: 0.2.0
+name: acala-loans
+version: 1.0.0
+description: ''
+repository: ''
+schema:
+  file: ./schema.graphql
+network:
+  genesisHash: "0x728dc44576157c8b04311d2670d8b1ff406a91b2ecbcad1c3b6c6f56f06effca"
+  endpoint: wss://aquadao-testnet.aca-dev.network/
+  chaintypes:
+    file: './src/chain-types.js'
+dataSources:
+  - kind: substrate/Runtime
+    startBlock: 1
+    mapping:
+      file: "./dist/index.js"
+      handlers:
+        - handler: handleBlock
+          kind: substrate/BlockHandler

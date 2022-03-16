@@ -1,0 +1,6 @@
+type TreasurayBalance @entity {
+  id: ID!
+  timestamp: Date
+  balance: Float
+}
+
