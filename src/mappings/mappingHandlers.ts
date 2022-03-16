@@ -78,7 +78,7 @@ const getBalance = async () => {
 export const handleBlock = async (block: SubstrateBlock) => {
 	const blockNumber = block.block.header.number.toNumber()
 
-	if(blockNumber % 50 === 0) {
+	if(blockNumber % 600 === 0) {
 		const timestamp = block.timestamp
 		const balance = await getBalance()
 		const record = new TreasurayBalance(`${blockNumber}`)
